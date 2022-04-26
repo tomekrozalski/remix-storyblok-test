@@ -1,13 +1,12 @@
 {
-  "name": "remix-template-netlify",
+  "name": "remix-template-vercel",
   "private": true,
   "description": "",
   "license": "",
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "dev": "cross-env NODE_ENV=development netlify dev",
-    "start": "cross-env NODE_ENV=production netlify dev"
+    "dev": "remix dev"
   },
   "dependencies": {
     "@next-boost/hybrid-disk-cache": "^0.3.0",
@@ -27,6 +26,6 @@
     "eslint": "^8.11.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=14"
   }
 }
