@@ -6,6 +6,35 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { storyblokInit, apiPlugin } from "@storyblok/react";
+
+import Feature, { links as featureLinks } from "~/blocks/Feature";
+import Grid, { links as gridLinks } from "~/blocks/Grid";
+import Page, { links as pageLinks } from "~/components/Page";
+import Teaser, { links as teaserLinks } from "~/blocks/Teaser";
+
+// It is just that simple!
+// https://www.storyblok.com/tp/headless-cms-remix
+
+const components = {
+  feature: Feature,
+  grid: Grid,
+  teaser: Teaser,
+  page: Page,
+};
+
+storyblokInit({
+  accessToken: "sGgfmMHOj5USmzN7zwWnIgtt",
+  components,
+  use: [apiPlugin],
+});
+
+export const links = () => [
+  ...pageLinks(),
+  ...teaserLinks(),
+  ...gridLinks(),
+  ...featureLinks(),
+];
 
 export const meta = () => ({
   charset: "utf-8",
