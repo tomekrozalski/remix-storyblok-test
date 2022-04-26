@@ -1,8 +1,12 @@
 import { storyblokEditable } from "@storyblok/react";
 
 import styles from "./teaser.css";
+import stylesDesktop from "./teaser-desktop.css";
 
-export const links = () => [{ href: styles, rel: "stylesheet" }];
+export const links = () => [
+  { href: styles, rel: "stylesheet" },
+  { href: stylesDesktop, rel: "stylesheet", media: "(min-width: 800px)" },
+];
 
 const Teaser = ({ blok }) => {
   return (

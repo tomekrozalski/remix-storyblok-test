@@ -1,1 +1,1 @@
-export { default, loader } from "./$slug";
+export { default, links, loader } from "./$slug";
